@@ -54,7 +54,7 @@ _텍스트_
 
 ### 이미지
 ```
-![사진제목](http://i.imgur.com/GRhcVuw.jpg)
+![사진제목](http://i.imgur.com/GRhcVuw.jpg)
 ```
 로컬 리소스를 참조할땐 상대 경로를 이용한다
 

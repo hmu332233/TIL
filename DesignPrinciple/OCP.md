@@ -1,7 +1,7 @@
 ## OCP(개방폐쇄의 원칙 : Open/Close Principle)
 
-> **Software entities should be open for extension, but colsed for modification**
-> 소프트웨어 엔티티들은 확장에 대해서는 열고, 수정에 대해서는 닫아야한다.
+> **Software entities should be open for extension, but colsed for modification**  
+> 소프트웨어 엔티티들은 확장에 대해서는 열고, 수정에 대해서는 닫아야한다.  
 
 #### 정의
 

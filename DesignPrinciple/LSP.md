@@ -1,6 +1,5 @@
 ## LSP(리스코브 대체의 원칙 : The Liskov Substitution Principle)
-
-
+<br/>
 > **Subtypes must be substitutable for their base types**  
 > *서브타입이 그들의 베이스 타입을 대체할 수 있어야 한다.*  
 > 자식이 부모를 완벽하게 대체 할 수 있어야한다.  

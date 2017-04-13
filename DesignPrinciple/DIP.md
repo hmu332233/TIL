@@ -1,5 +1,5 @@
 ## DIP(의존 역전의 원칙 : Dependency Inversion Principle)
-
+<br/>
 > **High-level modules should not depend on low-level modules. Both should depend on abstractions.**  
 > 하이 레벨 모듈은 로우 레벨 모듈에 종속되어서는 안된다. 둘 다 추상적인 개념에 의존해야 한다.
 

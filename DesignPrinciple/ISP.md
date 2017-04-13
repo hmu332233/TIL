@@ -1,5 +1,6 @@
 ## ISP(인터페이스 분리의 원칙 : Interface-Segregation Principle)
 <br/>
+
 >  **Clients should not be forced to depend upon methods that they do not use**
 > 클라이언트들은 그들이 사용하지 않는 메소드에 의존하는 것이 강제되지 않아야한다.
 > 클라이언트들는 그들이 사용하지 않는 메소드에 의존 관계를 맺으면 안된다.

@@ -1,5 +1,6 @@
 ## SRP(단일책임의 원칙 : Single Responsibility Principle)
 <br/>
+
 > **A class should have only one reason to change**  
 > 한 클래스는 변화에 오직 한가지 이유만을 가져야한다.  
 > 어떤 클래스를 변경해야 하는 이유는 오직 하나뿐 이어야 한다.

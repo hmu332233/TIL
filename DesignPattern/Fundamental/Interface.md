@@ -8,7 +8,7 @@ so you can substitute another data-and-service-providing class with minimal impa
 
 
 - You accomplish this by having other classes access the data and services through an interface.  
-  다른 클래스가 **Interface** 를 통해 데이터 및 서비스에 액세스하게함으로써이 작업을 수행 할 수 있습니다.
+  다른 클래스가 **Interface** 를 통해 데이터 및 서비스에 액세스하게함으로써이 작업을 수행 할 수 있다.
 
 
 - 포인트는 '**사용방식의 일관성**'  

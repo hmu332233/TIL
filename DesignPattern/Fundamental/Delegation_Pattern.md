@@ -17,3 +17,8 @@
   상속( **Inheritance** )을 통해 문제를 해결한다.
 - 중복되는 코드가 있는 클래스 간의 관계가 동질의 것이 아니라면(상속 관계가 될 수 없다면)
   중복되는 코드를 분리하여 위임( **Delegation** )시켜 문제를 해결한다.
+
+### Related Patterns
+- 거의 대부분의 패턴들이 **Delegation** 을 사용한다.
+- Some of the patterns that rely most clearly on delegation are the Decorator pattern and the Proxy pattern
+  Delegation을 가장 명확하게 의존하는 패턴은 `Proxy pattern`과 `Decorator pattern`이다

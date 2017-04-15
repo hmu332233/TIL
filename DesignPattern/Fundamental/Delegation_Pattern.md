@@ -5,6 +5,9 @@
   이를 분리하여 별도의 클래스로 만들고  
   별도의 클래스에게 위임( **Delegation** )하는 방식의 패턴
 
+
+- 포인트는 '**중복코드의 분리**'
+
 ### Java API Usage
 - java.util이 이러한 Delegation Pattern이 적용된 모습이다.
 

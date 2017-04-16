@@ -33,6 +33,15 @@ Immutable : 변경불가능한
 
 - 포인트는 '**수정시 새로운 객체를 리턴**'
 
+
+- 가장 대표적인 예로 `java`에 `String`이 이에 해당한다.
+```java
+
+a = "abc" // 이것과
+a += "d"  // 이것은 서로 다른 객체이다.
+
+```
+
 ***
 
 ![IMMUTABLe2](http://i.imgur.com/Cd6My8Z.png)

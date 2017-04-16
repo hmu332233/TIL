@@ -44,7 +44,7 @@ a += "d"  // 이것은 서로 다른 객체이다.
 
 ***
 
-![IMMUTABLe2](http://i.imgur.com/Cd6My8Z.png)
+![immutable3](http://i.imgur.com/q3PKm9b.png)
 
 - 값을 얻는 `getX()`, `getY()`에 대해서는 허용
-- 값을 변경하는 `offset()`에 대해서는 허용하지 않고 새로운 객체를 생성하도록 함
+- 값을 변경하는 `offset()`에 대해서는 허용하지 않고 **새로운 객체를 생성**하도록 함

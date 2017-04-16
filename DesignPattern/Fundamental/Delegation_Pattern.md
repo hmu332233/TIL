@@ -25,3 +25,19 @@
 - 거의 대부분의 패턴들이 **Delegation** 을 사용한다.
 - Some of the patterns that rely most clearly on delegation are the Decorator pattern and the Proxy pattern
   Delegation을 가장 명확하게 의존하는 패턴은 `Proxy pattern`과 `Decorator pattern`이다
+
+
+***
+
+#### 중복 코드의 문제
+
+![delegation1](http://i.imgur.com/X5PAGTu.png)
+
+#### 동질의 것이면 상속으로 해결
+
+![delegation2](http://i.imgur.com/X5RLuq3.png)
+
+#### 동질의 것이 아니라면 Delegation으로 해결
+
+
+![delegation3](http://i.imgur.com/iHvb65f.png)

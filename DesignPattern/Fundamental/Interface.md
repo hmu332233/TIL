@@ -16,18 +16,21 @@ so you can substitute another data-and-service-providing class with minimal impa
   Service를 제공하는 클래스는 is-a 관계가 아니더라도 Interface를 통해 누구나 확장이 가능하다.
 
 ### Related patterns
-- Delegation
+- **Delegation**
   - The Delegation and Interface patterns are often used together.  
     Delegation 과 Interface 패턴은 종종 함께 사용된다.
-- Adapter
+- **Adapter**
   - The Adapter pattern allows objects that expect another object to implement a particular interface to work with objects that don’t implement the expected interface.  
     어댑터 패턴을 사용하면 다른 개체가 특정 인터페이스를 구현하여 예상되는 인터페이스를 구현하지 않는 개체와 함께 작동하도록 할 수 있습니다.
     > 뭔말이야 이거..
 
-- Strategy
+- **Strategy**
   - The Strategy pattern uses the Interface pattern.
     Strategy 패턴은 Interface 패턴을 사용한다
-- Anonymous Adapter
+- **Anonymous Adapter**
   - The Anonymous Adapter pattern (described in Patterns in Java, Volume 2) uses the Interface pattern.
 
 - Many other patterns use the Interface pattern
+
+
+![interface](http://i.imgur.com/DpQj5FS.png)

@@ -27,3 +27,9 @@ so their logic can be inherited by the related classes that extend the superclas
 - 즉 child는 parent에서 위임(강요)받은 method를 구현해야하며,  
   parent에서 abstract이 아닌 구현되어 있는 부분은 그대로 상속받아 쓰거나  
   필요한 경우 오버라이드하여 사용한다.
+
+<div style="text-align:center" markdown="1">
+
+![abstract](http://i.imgur.com/8JcyIaB.png)
+
+</div>

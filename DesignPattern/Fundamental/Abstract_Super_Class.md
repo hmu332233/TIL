@@ -1,7 +1,7 @@
 ## Abstract Super Class
 
 ### 개요
-- Ensure consistent behavior of conceptually related classes by giving them a common abstract superclass.
+- Ensure consistent behavior of conceptually related classes by giving them a common abstract superclass.  
   공통의 Abstract super class를 제공함으로써 개념적으로 관련된 클래스에게 일관된 행동을 보장한다.
 
 

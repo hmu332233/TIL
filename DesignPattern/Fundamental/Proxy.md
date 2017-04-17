@@ -54,6 +54,7 @@
 - 파워포인트의 큰 틀만 미리 로딩하고 나중에 속 내용 로딩하는 거랑 비슷
 - ex) virtual proxy
 #### Remote Call
+- 다른 컴퓨터 또는 프로그램에 있는 Service를 호출하도록 해주는 것
 - ex) remote proxy
 
 ### Related Pattern

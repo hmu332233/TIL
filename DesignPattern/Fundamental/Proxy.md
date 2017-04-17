@@ -7,7 +7,14 @@
   해당 객체에 대한 메소드 호출을 위임합니다.
 
 
-- 프록시 객체의 클래스는 대개 프록시를 처리한다는 클라이언트 객체의 인식을 제거하는 방식으로 선언됩니다.
+- Proxy 객체는 client와 실제 service 중간에서  
+  본인의 할 일을 하고 그대로 호출을 넘기는 역할을 한다.  
+
+![proxy](http://i.imgur.com/itvQnwe.png)
+
+- 예를들어 client가 doIt()을 호출하면 ServiceProxy는  
+  본인의 할 일(client가 접근이 가능한지 아닌지 판별, 접근 기록 등등)을 수행하고  
+  실제 Service에게 doIt()을 그대로 호출시켜준다.
 
 
 ### 내용
@@ -31,10 +38,14 @@
 
 #### Authentication
 - 자격확인(인증)
-- 호출한 대상이 호출이 가능한지 아닌지
+- 호출한 대상이 호출이 가능한지 아닌지( 접근가능,불가)
 - ex) protection proxy
 #### Authorization
 - Access control
+- 어떠한 동작을 하도록 컨트롤 해주는 역할( 아에 경로를 바꿔버림 )
+- 예를들어, 구글에서 야한거 검색해서 클릭했는데 경찰청 홈페이지로 바뀌어버리는 부분!
+- Authorization를 하려면 Authentication이 깔려있어야하는 부분이라  
+  그렇게 다르지는 않지만 굳이 나누자면 이렇게 나눈다의 느낌
 - ex) protection proxy
 #### Log/Audit Trall
 - Access 기록

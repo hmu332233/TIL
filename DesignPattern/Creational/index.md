@@ -4,11 +4,11 @@
 
 ### Factory Method pattern
 - 일반적으로 가장 많이 사용됨
-- **생성된 객체의 클래스를 알 필요없이** 객체가 다른 객체의 생성을 시작하는 방법
+- **생성된 객체의 클래스를 알 필요없이** 객체가 <U>다른 객체의 생성</U>을 시작하는 방법
 
 ### Abstract Factory pattern
 - a way for objects to initiate the creation of a variety of different kinds of objects without knowing the classes of the objects created  
-  객체가 생성 된 객체의 클래스를 모른 채 다양한 종류의 객체를 생성하는 방법
+  **생성된 객체의 클래스를 알 필요없이** 객체가 <U>다양한 종류의 객체 생성</U>을 시작하는 방법
 -  The Factory of a factory
 
 ### Prototype pattern

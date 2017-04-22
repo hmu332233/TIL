@@ -63,6 +63,11 @@
 - it is a review where the author leads the team through a manual or simulated execution of the product using predefined scenarios.
 - 미리 정의된 시나리오를 사용하여 수동 또는 시뮬레이션으로 제품의 실행을 통해 작성자가 팀을 이끄는 리뷰이다.
 
+##### 코드 인스펙션과 워크스루의 차이
+- **코드인스펙션** : 체크리스트를 통해 사전에 정의된 기준에 대해 체크해 나가는 것으로 결함을 찾아내는 방식
+
+- **워크쓰루** : 미리 정의된 시나리오(테스트케이스)를 이용한다. 생각을 통해 프로그램을 실행하며 과정을 진행하며 프로그램의 상태를 종이나 화이트보드에 기록해 나가면서 결함이 있는지 찾아내는 방식
+
 ***
 
 ### Code Inspection

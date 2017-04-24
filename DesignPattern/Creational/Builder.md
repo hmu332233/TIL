@@ -51,6 +51,20 @@ Builder : AbstractBuilder 클래스는 일반적으로 getInstance라고하는 �
 
 Product : 제품 클래스는 데이터 표현 유형을 정의합니다.
 
+
+### 정리
+
+- Director가 같은 재료를 가지고  
+  모양 1번으로 만들어! 라고 하면 모양 1번으로 만들고  
+  모양 2번으로 만들어! 라고 하면 모양 2번으로 만들어 주는 것이다.
+  <br/>
+- 위에껄로 정리하면  
+  MessageManager가 같은 재료를 가지고  
+  PROFS로 만들어! 라고 하면 Converter를 상속받은 PROFS에서 그 모양대로 만들어서 리턴을 해주는 거고  
+  MAPZ로 만들어! 라고하면 Converter를 상속받은 MAPZ에서 그 모양대로 만들어서 리턴을 해주는 것이다!
+
+
+
 ### 참고
 
 

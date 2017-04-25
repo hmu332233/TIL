@@ -48,9 +48,11 @@
 
 - **XP**
 ![XP](http://i.imgur.com/4vg97L7.png)
+
 - **Scrum**
 ![scrum](http://i.imgur.com/2MVnnMI.png)
 ![scrum2](http://i.imgur.com/rAk7CVM.png)
+
 - **RUP**
 ![RUP](http://i.imgur.com/x7r3Dt7.png)
 

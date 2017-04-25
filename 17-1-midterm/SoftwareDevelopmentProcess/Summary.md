@@ -47,13 +47,16 @@
 #### xp, 스크럼, rup 각 그림( 단계들 그림 )
 
 - **XP**
+
 ![XP](http://i.imgur.com/4vg97L7.png)
 
 - **Scrum**
+
 ![scrum](http://i.imgur.com/2MVnnMI.png)
 ![scrum2](http://i.imgur.com/rAk7CVM.png)
 
 - **RUP**
+
 ![RUP](http://i.imgur.com/x7r3Dt7.png)
 
 #### 스크럼 업무 그룹(역할) 설명

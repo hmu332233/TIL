@@ -64,4 +64,6 @@ patient = Patient.create
 
 physician.patients << patient
 
+patient.physicians << physician
+
 ```

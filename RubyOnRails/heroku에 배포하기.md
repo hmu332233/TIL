@@ -35,7 +35,7 @@ group :development do
 end
 ```
 
-2. `em 'sqlite3'` 를 `group :devlopment, :test`로 옮긴다.
+2. `gem 'sqlite3'` 를 `group :devlopment, :test`로 옮긴다.
 3. `group :production` 을 만든다.
 4. `groupt :production` 에 `gem 'pg'` 와 `gem 'rails_12factor'` 를 추가한다.
 5. `Gemfile` 의 최종 모습

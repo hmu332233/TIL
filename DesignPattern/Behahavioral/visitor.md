@@ -11,13 +11,13 @@
 
 #### 내용
 
-![2](/assets/2.png)
-![3](/assets/3.png)
-![4](/assets/4.png)
-![5](/assets/5.png)
-![6](/assets/6.png)
-![7](/assets/7.png)
-![8](/assets/8.png)
-![9](/assets/9.png)
-![10](/assets/10.png)
-![11](/assets/11.png)
+![2](/assets/visitor/2.png)
+![3](/assets/visitor/3.png)
+![4](/assets/visitor/4.png)
+![5](/assets/visitor/5.png)
+![6](/assets/visitor/6.png)
+![7](/assets/visitor/7.png)
+![8](/assets/visitor/8.png)
+![9](/assets/visitor/9.png)
+![10](/assets/visitor/10.png)
+![11](/assets/visitor/11.png)

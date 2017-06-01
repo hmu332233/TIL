@@ -37,7 +37,7 @@ end
 
 2. `gem 'sqlite3'` 를 `group :devlopment, :test`로 옮긴다.
 3. `group :production` 을 만든다.
-4. `groupt :production` 에 `gem 'pg'` 와 `gem 'rails_12factor'` 를 추가한다.
+4. `group :production` 에 `gem 'pg'` 와 `gem 'rails_12factor'` 를 추가한다.
 5. `Gemfile` 의 최종 모습
 
 ```
@@ -71,7 +71,7 @@ end
 
 1. 서버가 켜져 있다면 (Run project) 중이라면, 서버를 멈춘다 (Stop).
 2. 터미널에 `$ bundle install` 이라고 입력한다.
-3. 새로 추가한 gem 들이 설치되고 `undle complete!` 를 포함한 구문이 나오면 성공.
+3. 새로 추가한 gem 들이 설치되고 `bundle complete!` 를 포함한 구문이 나오면 성공.
 
 ***
 

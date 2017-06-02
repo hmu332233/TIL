@@ -33,5 +33,5 @@
 
 ### 내용
 
-![1](/assets/future/1.png)
-![2](/assets/future/2.png)
+![1](/assets/future/1.PNG)
+![2](/assets/future/2.PNG)

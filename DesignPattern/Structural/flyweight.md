@@ -19,6 +19,8 @@
 
 ### 내용
 
+![(1)](/assets/flyweight/1.jpg)
+![(2)](/assets/flyweight/2.jpg)
 ![(3)](/assets/flyweight/3.jpg)
 ![(4)](/assets/flyweight/4.jpg)
 ![(5)](/assets/flyweight/5.jpg)
@@ -28,5 +30,3 @@
 ![(9)](/assets/flyweight/9.jpg)
 ![(10)](/assets/flyweight/10.jpg)
 ![(11)](/assets/flyweight/11.jpg)
-![(12)](/assets/flyweight/12.jpg)
-![(12)](/assets/flyweight/13.jpg)

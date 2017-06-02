@@ -1,4 +1,4 @@
-# Flyweight Pattern
+# Pattern
 
 ### 개요
 
@@ -19,14 +19,14 @@
 
 ### 내용
 
-![flyweight (3)](</assets/flyweight/flyweight (3).jpg>)
-![flyweight (4)](</assets/flyweight/flyweight (4).jpg>)
-![flyweight (5)](</assets/flyweight/flyweight (5).jpg>)
-![flyweight (6)](</assets/flyweight/flyweight (6).jpg>)
-![flyweight (7)](</assets/flyweight/flyweight (7).jpg>)
-![flyweight (8)](</assets/flyweight/flyweight (8).jpg>)
-![flyweight (9)](</assets/flyweight/flyweight (9).jpg>)
-![flyweight (10)](</assets/flyweight/flyweight (10).jpg>)
-![flyweight (11)](</assets/flyweight/flyweight (11).jpg>)
-![flyweight (12)](</assets/flyweight/flyweight (12).jpg>)
-![flyweight (12)](</assets/flyweight/flyweight (13).jpg>)
+![(3)](/assets/flyweight/3.jpg)
+![(4)](/assets/flyweight/4.jpg)
+![(5)](/assets/flyweight/5.jpg)
+![(6)](/assets/flyweight/6.jpg)
+![(7)](/assets/flyweight/7.jpg)
+![(8)](/assets/flyweight/8.jpg)
+![(9)](/assets/flyweight/9.jpg)
+![(10)](/assets/flyweight/10.jpg)
+![(11)](/assets/flyweight/11.jpg)
+![(12)](/assets/flyweight/12.jpg)
+![(12)](/assets/flyweight/13.jpg)

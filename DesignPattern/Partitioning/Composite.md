@@ -9,6 +9,14 @@
 - 전체-부분 계층 구조를 표현하는 트리 구조 모양
 - 클라이언트는 일관된 방식으로 부분 객체와 전체 객체를 일관되게 조작 할 수 있습니다.
 
+### useage
+- 'Group Shapes' Feature of MS Office Suite
+- Most of Desktop UI frameworks
+  - Java Swing Architecture
+  - SWT (Stand Widget Toolkit) / JFace
+  - MFC (Microsoft Foundation Class)
+
+
 ### 내용
 
 ![1](/assets/composite/1.PNG)

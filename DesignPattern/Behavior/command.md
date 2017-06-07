@@ -10,6 +10,10 @@
   - 명령의 전달 과정에서 여러 다른 요구 사항을 집어 넣을 수 있다.
   - 요청 내역을 큐에 저장하거나 로그로 기록하여(history 관리) 작업취소 등의 기능을 지원 할 수 있게 된다.
 
+### 참고
+
+- [커맨드 패턴(Command Pattern)](http://copynull.tistory.com/142)
+
 ### 내용
 
 ![1](/assets/command/1.png)

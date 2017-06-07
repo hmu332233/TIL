@@ -5,14 +5,12 @@
 
 ![1](/assets/state/main.PNG)
 
-
-- 객체의 상태에 따라 각각의 행위를 변경할 수 있게 캡슐화한다.
-- 동적으로 행동을 교체할 수 있다.
+- Client는 Context에게 동일한 request()를 호출하지만 현재 상태(State)에 따라  
+  서로 다른 행위가 수행되도록한다.  
+- 이때 객체의 상태에 따라 각각의 행위를 변경할 수 있도록 분리하여 캡슐화한다
 <br/>
 
-- Client는 Context에게 동일한 request()를 호출하지만 현재 상태(State)에 따라  
-  서로 다른 행위가 수행되도록한다.
-- 여기까지는 strategy pattern과 동일하나 state pattern은 외부에서 setState와 같이 임의로 변경하지 않고 내부에서 state가 변경되어간다.
+- 동적으로 행동을 교체할 수 있다
 
 ```java
 main(){

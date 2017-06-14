@@ -9,46 +9,46 @@ int digit(int arr_n , int digit);
 int main()
 {
     int n,k;
- 
+
 	cin>>n;
 	cin>>k;
-	
-	
+
+
 //	cout<< digit(n,k);
-	
-	
+
+
   	int arr[n+1];
 	arr[0] = 0;
-   
+
 	int i;
 	for( i = 1 ; i <= n ; i++)
 	{
 	  	cin>>arr[i];
 	}
-	   
+
 	radixSort( arr , n , k);
-	 	
+
 	for( i = 1 ; i <= n;i++)
 	{
 		cout<<arr[i]<<" ";
 	}
-	    
-	
-    
+
+
+
 }
 
 
 
 void radixSort(int arr[], int n, int k)
 {
-	//¿ø¼ÒµéÀÌ °¢°¢ ÃÖ´ë k ÀÚ¸®¼öÀÎ A[1..n]À» Á¤·ÄÇÑ´Ù. 
-	//°¡Àå ³·Àº ÀÚ¸®¼ö¸¦ 1¹øÂ° ÀÚ¸®¼ö¶ó ÇÔ 
+   //ì›ì†Œë“¤ì´ ê°ê° ìµœëŒ€ k ìžë¦¬ìˆ˜ì¸ A[1..n]ì„ ì •ë ¬í•œë‹¤.
+	 //ê°€ìž¥ ë‚®ì€ ìžë¦¬ìˆ˜ë¥¼ 1ë²ˆì§¸ ìžë¦¬ìˆ˜ë¼ í•¨
    queue<int> que[10];
 
-   
+
    int d;
    int p;
-   
+
    for(int i = 1 ; i <= k ; i++)
    {
    		for(int j = 1 ; j <= n ; j++)
@@ -67,7 +67,7 @@ void radixSort(int arr[], int n, int k)
 		}
    }
 
-        
+
 }
 
 int digit(int arr_n , int digit)
@@ -78,14 +78,11 @@ int digit(int arr_n , int digit)
 		for(int i = 0 ; i < digit ; i++)
 			num*=10;
 	}
-	else 
+	else
 	{
 		return arr_n % 10;
 	}
-	
+
 
 	return (arr_n- (arr_n / num)*num)/(num/10);
 }
-
-
-

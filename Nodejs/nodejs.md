@@ -1,3 +1,10 @@
+### node 콘솔
+- `node`만 치면 콘솔모드로 전환된다.
+```bash
+$ node
+> 입력가능!
+```
+
 ### NPM
 
 - Node Package Manager
@@ -33,4 +40,30 @@ $ npm install [packagename] --save
 test.js
 ```js
 const name = require('name')
+```
+
+
+### Nodejs sample
+
+```js
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+/*
+* 사용자에게 어떤 server의 내용을 보여줄 것인가
+* req => request 내용을 담고 있음
+* res => 사용자에게 보여줄 내용을 담음
+*/
+const server = http.createServer(function(req,res){
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
+
+//서버가 특정 ip, 특정 port를 바라보고 있게한다 (listen)
+server.listen( port , hostname, function(){
+  var addr = server.address();
+  console.log("Chat server listening at", addr.address + ":" + addr.port);
+});
 ```

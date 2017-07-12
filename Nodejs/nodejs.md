@@ -11,8 +11,9 @@ $ node
 - 타인의 모듈을 가져다 쓰는 방법
 - https://www.npmjs.com/
 
-- #### NPM 독립적인 앱 설치
+- #### NPM 독립적인 앱 설치(글로벌)
   - npm을 프로젝트에 상관없이 독립적인 앱으로 사용하고 싶을 때에는 다음과 같이 한다.
+  - 시스템 디렉토리에 설치하는 것을 의미
 ```bash
 $ npm install [packagename] -g
 ```
@@ -42,6 +43,15 @@ test.js
 const name = require('name')
 ```
 
+- #### 모듈 제거
+```bash
+$ npm uninstall [packagename]
+```
+
+- #### 모듈 업데이트
+```bash
+$ npm update [packagename]
+```
 
 ### Nodejs sample
 

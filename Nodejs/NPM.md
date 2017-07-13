@@ -35,3 +35,15 @@ var arr = [3,6,9,12]
 console.log(_.first(arr)) // => 3
 console.log(_.last(arr))  // => 12
 ```
+
+- #### supervisor
+  - 서버쪽 코드가 수정될 때 자동으로 서버를 재실행 해준다.
+  - [사이트](https://www.npmjs.com/package/supervisor)
+
+```bash
+$ npm install supervisor -g
+```        
+```bash
+$ node app.js 대신 아래와 같이 한다
+$ supervisor app.js
+```

@@ -35,3 +35,6 @@
   <br/>
   - `Microsoft Visual C++ 2010 SP1 Redistributable Package (x86)` 가 설치되어있지 않으면 에러가 나니 아래의 링크에서 설치하도록 한다.
   - https://www.microsoft.com/en-us/download/details.aspx?id=8328
+
+### 종료
+  - `vagrant halt`라고 입력하면 가상머신이 종료가 된다.

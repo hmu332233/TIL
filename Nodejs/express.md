@@ -120,3 +120,27 @@ req.query는 json의 형태를 띄고 있다.
   "__proto__": {}
 }
 ```
+
+### responce body의 정보를 가져오는 법
+
+`req.body`를 사용하면 body의 정보를 가져와서 쓸 수 있다(post로 데이터를 전송했을 경우 등)  
+json의 형태로 제공되는데 기본적으로는 정의되어있지 않고  
+미들웨어인 `body-parser`와 `multer`를 이용해야만 정보를 가져올 수 있다
+
+```js
+var app = require('express')();
+var bodyParser = require('body-parser');
+var multer = require('multer'); // v1.0.5
+var upload = multer(); // for parsing multipart/form-data
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+app.post('/profile', upload.array(), function (req, res, next) {
+  console.log(req.body);
+  res.json(req.body);
+});
+```
+
+**참고**
+[http 프로토콜](http://exoluse.egloos.com/v/4572381)

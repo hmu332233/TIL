@@ -47,3 +47,40 @@ $ npm install supervisor -g
 $ node app.js 대신 아래와 같이 한다
 $ supervisor app.js
 ```
+
+- #### decompress-zip
+  - zip, tar 파일의 압축 해제, 내부 파일 목록 보기가 가능하다
+  - [사이트](https://www.npmjs.com/package/decompress-zip)
+
+```bash
+$ npm install --save decompress-zip
+```
+```js
+var Unzipper = require('decompress-zip');
+
+app.post('/upload', upload.single('userfile'), function(req, res) {
+
+    if (req.file){
+
+        var filepath = path.join(req.file.destination, req.file.filename);
+        var unzipper = new Unzipper(filepath);
+
+        // .extract();
+        unzipper.on("extract", function () {
+            console.log("Finished extracting");
+        });
+
+        unzipper.extract({ path: "uploads/zip/"+req.file.filename});
+
+        // .list();
+        unzipper.on('list', function (files) {
+            console.log('The archive contains:');
+            console.log(files);
+        });
+
+        unzipper.list();
+    }
+
+    res.send('Uploaded : ' + req.file.filename );
+});
+```

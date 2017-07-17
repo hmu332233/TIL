@@ -144,3 +144,33 @@ app.post('/profile', upload.array(), function (req, res, next) {
 
 **참고**
 [http 프로토콜](http://exoluse.egloos.com/v/4572381)
+
+### put, delete method 사용하기
+
+js
+```js
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+
+
+app.put('/users/:id',function(req,res){
+  //do something
+});
+
+```
+form
+```html
+<form method="POST">
+  <input type="hidden" name="_method" value="put">
+</form>
+```
+
+### cookie 사용하기
+
+```js
+//count 라는 쿠키에 1을 저장
+res.cookie('count', 1);
+
+//쿠기 불러오기
+var count = req.cookies.count
+```

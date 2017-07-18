@@ -168,9 +168,50 @@ form
 ### cookie 사용하기
 
 ```js
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 //count 라는 쿠키에 1을 저장
 res.cookie('count', 1);
 
 //쿠기 불러오기
 var count = req.cookies.count
+```
+보안을 위해 쿠키를 암호화하는 것이 좋다.
+```js
+//두번째 인자는 암호화 key
+var cookieParser = require('cookie-parser');
+app.use(cookieParser('1112345')); //파라미터는 암호화 key
+
+//count 라는 쿠키에 1을 저장, 암호화해서
+res.cookie('count', 1,{signed:true});
+
+//쿠기 복호화 후 불러오기
+var count = req.signedCookies.count
+```
+### sample
+```js
+var express = require("express");
+var app = express();
+//쿠기를 사용하기 위한 라이브러리
+var cookieParser = require('cookie-parser');
+app.use(cookieParser('123456'));
+
+app.get('/count',function(req,res){
+
+    if(req.signedcookies.count)
+      var count = parseInt(req.signedcookies.count);
+    else
+      var count = 0;
+
+
+    res.cookie('count', count+1,{signed:true});
+
+    res.send('count :' + count );
+});
+
+
+app.listen(process.env.PORT,function(){
+   console.log('Connected!');
+});
 ```

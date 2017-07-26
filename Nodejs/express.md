@@ -215,3 +215,72 @@ app.listen(process.env.PORT,function(){
    console.log('Connected!');
 });
 ```
+
+### session
+값을 클라이언트에 직접 저장하는  cookie와 달리  
+클라이언트를 식별하는 id만을 저장하고  
+이 id를 통해 서버에서 해당 값을 가져와 처리한다.
+
+```bash
+$ npm install express-session --save
+```
+다음과 같이 `req.session`으로 간단하게 사용이 가능하다
+```js
+var session = require('express-session')
+
+app.use(session({
+  secret: '123456', // 암호화 key값, 원하는걸로 아무거나 넣으면됨
+  resave: false,
+  saveUninitialized: true
+}))
+
+//session에 count 1을 넣는다
+req.session.count = 1
+```
+기본적으로 `express-session`은 메모리를 이용한다.  
+session정보를 file로 저장하고 싶으면 다음과 같이 한다
+```js
+var session = require('express-session')
+var FileStore = require('session-file-store')(session);
+
+app.use(session({
+  store: new FileStore(),
+  secret: '123456', // 암호화 key값
+  resave: false,
+  saveUninitialized: true
+}))
+```
+
+session정보를 mysql에 저장하고 싶을 땐 다음과 같이 한다
+```js
+var session = require('express-session')
+var MySQLStore = require('express-mysql-session')(session);
+
+var options = {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'root',
+    database: 'o2'
+};
+
+app.use(session({
+  store: new MySQLStore(options),
+  secret: '123456', // 암호화 key값
+  resave: false,
+  saveUninitialized: true
+}))
+
+```
+다음과 같은 table이 자동으로 추가되는걸을 확인 할 수 있다
+```
+mysql> desc sessions;
++------------+------------------+------+-----+---------+-------+
+| Field      | Type             | Null | Key | Default | Extra |
++------------+------------------+------+-----+---------+-------+
+| session_id | varchar(128)     | NO   | PRI | NULL    |       |
+| expires    | int(11) unsigned | NO   |     | NULL    |       |
+| data       | text             | YES  |     | NULL    |       |
++------------+------------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+```

@@ -137,3 +137,23 @@ var _storage = multer.diskStorage({
 
 var upload = multer({ storage: _storage })
 ```
+
+### 모듈 분리하기
+- 모듈을 분리하려면 다음과 같이 하면 된다.
+- `module.exports`로 되어있는 부분만이 인터페이스가 된다.
+```js
+/* lib/calculator.js */
+module.exports.sum = function(a,b){
+    return a+b;
+}
+module.exports.avg = function(a,b){
+    return (a+b)/2;
+}
+```
+- 모듈을 불러와 사용하려면 다음과 같이 한다
+```js
+var cal = require("./lib/calculator");
+
+console.log(cal.sum(1,2));
+console.log(cal.avg(2,6));
+```

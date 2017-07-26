@@ -24,3 +24,10 @@ $ service mysql status
 ```bash
 $ mysql -u root - p
 ```
+
+### 에러
+권한이 없는 경우로 `sudo`를 붙여 실행하면 정상적으로 작동한다
+```bash
+df: '/var/lib/mysql/.': Permission denied
+ * /etc/init.d/mysql: ERROR: The partition with /var/lib/mysql is too full!
+```

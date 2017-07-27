@@ -150,7 +150,6 @@ express 최신버전은 미들웨어가 따로 npm으로 분리가 되었다
 [참고](https://github.com/senchalabs/connect#middleware)
 js
 ```js
-var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
 
 app.use(bodyParser.json())
@@ -161,6 +160,25 @@ app.put('/users/:id',function(req,res){
   //do something
 });
 
+```
+form
+```html
+<form method="POST" action="/users/:id?_method=PUT">
+  <!-- input -->
+</form>
+```
+다른 framework에서 사용하는 방식으로 하려면 이렇게 하면 된다
+```js
+var methodOverride = require('method-override')
+
+app.use(methodOverride(function (req, res) {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    // look in urlencoded POST bodies and delete it
+    var method = req.body._method
+    delete req.body._method
+    return method
+  }
+}))
 ```
 form
 ```html

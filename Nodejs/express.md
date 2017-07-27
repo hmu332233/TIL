@@ -146,12 +146,16 @@ app.post('/profile', upload.array(), function (req, res, next) {
 [http 프로토콜](http://exoluse.egloos.com/v/4572381)
 
 ### put, delete method 사용하기
-
+express 최신버전은 미들웨어가 따로 npm으로 분리가 되었다  
+[참고](https://github.com/senchalabs/connect#middleware)
 js
 ```js
-app.use(express.bodyParser());
-app.use(express.methodOverride());
+var bodyParser = require('body-parser')
+var methodOverride = require('method-override')
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 app.put('/users/:id',function(req,res){
   //do something

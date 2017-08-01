@@ -1,0 +1,104 @@
+### 설치
+몽고DB를 설치합니다. `apt-get install mongodb`
+몽고DB가 사용하는 기본 데이터 디렉토리를 생성합니다. `mkdir -p /data/db`
+
+### 실행
+- 서버실행 : `mongod`
+- 콘솔 접속 : `mongo`
+
+### 특징
+
+| RDB(MySQL)  | MongoDB  |
+|---|---|
+| Table  | Collection  |
+| Tuple  | Row	Document or BSON document  |
+| Column  | Field  |
+| Table Join  | Embedded Documents & Linking  |
+| Primary Key  | Primary Key (_id)  |
+
+## CRUD
+### 데이터 베이스 생성
+`use database_name`
+```
+> use mu_db
+switched to db mu_db
+```
+`db`로 현재 사용중인 db이름 확인 가능
+`show dbs`로 데이터베이스 목록들을 확인 가능
+  - 단 최소 한개 이상의 document가 있어야한다.
+  - `show databases`도 가능
+### 데이터 삽입
+- `insert()`메서드를 이용하여 collection에 document를 넣을 수 있다.
+```
+db.collection_name.insert(
+  <document>,
+  {
+    writeConcern: <document>,
+    ordered: <boolean>
+  }
+)
+```
+<document>는 json의 형태를 띄어야한다.
+같은 collection이라도 서로 다른 스키마를 가질 수 있다
+
+```
+db.books.insert([
+  { title: "Example2", author: "Lee", price: 200 },
+  { title: "Example3", author: "Lee", price: 300 },
+  { title: "Example4", author: "Lee" }
+  ])
+```
+
+```
+db.getCollectionNames()
+["books"]
+```
+
+### 데이터 읽기
+- `find()`를 이용해 collection 내의 document를 select 한다
+```
+db.collection.find(query, projection)
+```
+`pretty()`를 이용하면 이쁘게 출력해준다
+
+```
+db.users.find(
+  { },
+  { title: 1, author: 1 }
+)
+```
+- `0`은 가져오지 않겠다는 것이고 `1`은 가져오겠다는 뜻이다
+- `_id`는 기본적으로 포함이므로 명시적으로 `0`을 해줘야 안가져올 수 있다
+```
+SELECT title, author
+FROM books
+```
+```
+db.users.find(
+  { },
+  { _id: 0, title: 1, author: 1 }
+)
+```
+### 데이터 수정
+```
+db.<collection_name>.update(
+  <query>,
+  <update>,
+  {
+    upsert: <boolean>,
+    multi: <boolean>,
+    writeConcern: <document>
+  }
+)
+```
+
+### 데이터 삭제
+```
+db.collection.remove(
+  <query>,
+  {
+    justOne: <boolean>,
+    writeConcern: <document>
+  }
+)
+```

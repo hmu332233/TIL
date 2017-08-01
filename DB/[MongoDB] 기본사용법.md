@@ -1,6 +1,12 @@
 ### 설치
-몽고DB를 설치합니다. `apt-get install mongodb`
-몽고DB가 사용하는 기본 데이터 디렉토리를 생성합니다. `mkdir -p /data/db`
+- MongoDB 설치 :  
+  `apt-get install mongodb`
+- 몽고DB가 사용하는 기본 데이터 디렉토리를 생성 :  
+  `mkdir -p /data/db`
+```bash
+$ apt-get install mongodb
+$ mkdir -p /data/db
+```
 
 ### 실행
 - 서버실행 : `mongod`

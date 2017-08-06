@@ -162,3 +162,12 @@ app.post('/auth/login', function (req, res){
 })
 
 ```
+
+- #### morgan
+  - 개발시 접속하는 log를 볼 수 있게 해준다.
+  - [사이트](https://github.com/expressjs/morgan)
+
+```js
+var logger = require('morgan')
+app.use(logger('dev'));
+```

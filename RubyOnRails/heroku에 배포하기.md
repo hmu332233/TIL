@@ -115,3 +115,6 @@ $ git commit -m "의미있는 메세지를 짧게"
 #### 확인하기.
 
 - [app_name].herokuapp.com 으로 접속.
+
+#### 참고
+[rails4에서 heroku 시작하기](https://devcenter.heroku.com/articles/getting-started-with-rails4)

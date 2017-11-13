@@ -68,6 +68,21 @@
 }
 ```
 
+#### 5. 더보기
+- flex-grow
+  - default: 0
+  - 1이면 남아있는 공간만큼 flex-grow를 가지고 있는 아이가 차지한다
+```CSS
+  flex-grow: 1;
+```
+
+- flex-shrink
+  - default: 0
+  - 1이면 크기가 줄어들 필요가 있으면 줄어든다
+```CSS
+  flex-shrink: 1
+```
+
 ### 순서바꾸기
 - 아이템의 순서를 바꾸고 싶을 땐, `order`속성 하나면 끝!
 ![A](/assets/html/order.PNG)

@@ -7,6 +7,28 @@
 $ apt-get install mongodb
 $ mkdir -p /data/db
 ```
+- 최신버전 설치
+  - 위의 진행사항으로는 `2.4.9` 버전이 설치가 된다.
+  - 아래의 방법으로 최신버전을 설치할 수 있다.
+```bash
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+$ echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+$ sudo apt-get update
+
+// 최신버전 설치
+$ sudo apt-get install -y mongodb-org
+
+// 버전 명시 설치
+$ sudo apt-get install -y mongodb-org=3.0.6 mongodb-org-server=3.0.6 mongodb-org-shell=3.0.6 mongodb-org-mongos=3.0.6 mongodb-org-tools=3.0.6
+```
+
+### 삭제
+
+```bash
+$ sudo apt-get purge mongodb mongodb-clients mongodb-server mongodb-dev
+$ sudo apt-get purge mongodb-10gen
+$ sudo apt-get autoremove
+```
 
 ### 실행
 - 서버실행 : `mongod`

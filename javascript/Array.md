@@ -127,3 +127,18 @@ console.log(testArray);
 console.log(result);
 55
 ```
+
+---
+
+### Array.concat
+- 두 배열을 이어붙인다.
+
+```js
+var num1 = [1, 2, 3],
+    num2 = [4, 5, 6],
+    num3 = [7, 8, 9];
+
+var nums = num1.concat(num2, num3);
+
+console.log(nums); // 결과: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```

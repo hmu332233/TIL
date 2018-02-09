@@ -71,7 +71,13 @@ end
 
 1. 서버가 켜져 있다면 (Run project) 중이라면, 서버를 멈춘다 (Stop).
 2. 터미널에 `$ bundle install` 이라고 입력한다.
-3. 새로 추가한 gem 들이 설치되고 `bundle complete!` 를 포함한 구문이 나오면 성공.
+3. 새로 추가한 gem 들이 설치되고 `bundle complete!` 를 포함한 구문이 나오면 성공.  
+4. `pg`가 설치가 되지 않는다면 `libpq-dev`가 설치되어있는지 확인한다.
+   설치되어 있지 않다면 다음과 같이 설치한다.
+```bash
+$ sudo apt-get update
+$ sudo apt-get install libpq-dev
+```
 
 ***
 

@@ -1,5 +1,5 @@
 ## docker
-
+[참고](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
 ### 용어정리
 - 도커
   - 컨테이너 기반의 오픈소스 가상화 플랫폼
@@ -17,7 +17,8 @@
 $ curl -fsSL https://get.docker.com/ | sudo sh
 ```
 
-### 실행
+### 컨테이너 관련 명령어
+#### 실행
 ```bash
 $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 ````
@@ -31,3 +32,51 @@ $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 |–rm|	프로세스 종료시 컨테이너 자동 제거|
 |-it|-i와 -t를 동시에 사용한 것으로 터미널 입력을 위한 옵션|
 |–link|	컨테이너 연결 [컨테이너명:별칭]|
+
+#### 목록
+- 컨테이너 목록 확인
+```bash
+$ docker ps [OPTION]
+```
+#### 중지
+```bash
+$ docker stop [OPTIONS] CONTAINER [CONTAINER...]
+```
+- `CONTAINER`에는 컨테이너의 아이디 값을 넣으면 된다.
+- 컨테이너가 중지되어도 삭제되지 않고 남아있다.
+
+#### 삭제
+```bash
+$ docker rm [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+#### 로그 보기
+```bash
+$ docker logs [OPTIONS] CONTAINER
+```
+- `--tail 10` 10줄만 출력
+- `-f` 실시간 확인
+
+#### 컨테이너에 명령어 실행하기
+```bash
+$ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+
+### 이미지 관련 명령어
+#### 이미지 목록 확인하기
+- 다운로드한 이미지 목록을 확인
+```bash
+$ docker images [OPTIONS] [REPOSITORY[:TAG]]
+```
+
+#### 이미지 다운로드
+```bash
+$ docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+ex) docker pull ubuntu:14.04
+```
+
+#### 이미지 삭제
+```bash
+$ docker rmi [OPTIONS] IMAGE [IMAGE...]
+```

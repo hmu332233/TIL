@@ -32,7 +32,7 @@ $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 |–rm|	프로세스 종료시 컨테이너 자동 제거|
 |-it|-i와 -t를 동시에 사용한 것으로 터미널 입력을 위한 옵션|
 |–link|	컨테이너 연결 [컨테이너명:별칭]|
-
+- 모든 순서는 host:container 이다.
 #### 목록
 - 컨테이너 목록 확인
 ```bash
@@ -80,6 +80,16 @@ ex) docker pull ubuntu:14.04
 ```bash
 $ docker rmi [OPTIONS] IMAGE [IMAGE...]
 ```
+
+### 이미지 빌드
+- 파일과 함께 Dockerfile이 필요하다.
+[참고](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
+```
+$ docker build [OPTIONS] PATH | URL | -
+```
+| 옵션 | 설명 |
+|---|---|
+|-t|생성할 이미지의 이름|
 
 
 ### 예제

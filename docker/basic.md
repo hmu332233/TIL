@@ -80,3 +80,22 @@ ex) docker pull ubuntu:14.04
 ```bash
 $ docker rmi [OPTIONS] IMAGE [IMAGE...]
 ```
+
+
+### 예제
+```bash
+# before
+$ docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  mysql:5.7
+
+# after
+$ docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  -v /my/own/datadir:/var/lib/mysql \ # <- volume mount
+  mysql:5.7
+```
+- mysql:5.7 이미지를 3306 포트로 백그라운드로 실행한다.
+- 이름은 mysql 이고 컨테이너 내부의 `/var/lib/mysql` 디렉토리를 `/my/own/datadir`로 마운트시킨다.

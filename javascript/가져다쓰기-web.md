@@ -29,3 +29,21 @@ $('대상 selector').scroll(function() {
   }
 });
 ```
+
+## 화면 중앙에 배치하기
+```js
+// target {jquery object}
+set_position: function(target) {
+  var height = target.outerHeight();
+  var width = target.outerWidth();
+
+  var window_height = window.innerHeight;
+  var window_width = window.innerWidth;
+
+  var top = (window_height - height) / 2 - 50; // 50 for good looking position
+  var left = (window_width - width) / 2;
+
+  this.panel.css('top', top + 'px');
+  this.panel.css('left', left + 'px');
+},
+```

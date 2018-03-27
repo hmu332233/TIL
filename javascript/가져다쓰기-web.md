@@ -11,6 +11,19 @@ document.getElementById('.btn').addEventListener('click', function(e) {
 });
 ```
 
+## input 없이 copy 구현
+```js
+function setClipboard(value) {
+  var tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+```
+
 ## 특정 영역 제외하고 클릭하기
 ```js
 $('html').click(function(e) {

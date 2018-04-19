@@ -109,3 +109,26 @@ $ docker run -d -p 3306:3306 \
 ```
 - mysql:5.7 이미지를 3306 포트로 백그라운드로 실행한다.
 - 이름은 mysql 이고 컨테이너 내부의 `/var/lib/mysql` 디렉토리를 `/my/own/datadir`로 마운트시킨다.
+
+
+### 배포
+#### 로그인
+```bash
+$ docker login
+```
+#### 태그
+```bash
+$ docker tag TARGET_IMAGE[:TAG] IMAGE_NAME[:TAG]
+```
+```bash
+$ docker tag target hmu332233/remote:1.0
+```
+$ docker tag
+```
+#### 배포
+```bash
+$ docker push IMAGE[:TAG]
+```
+```bash
+$ docker push hmu332233/remote:1.0
+```

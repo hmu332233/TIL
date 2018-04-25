@@ -11,3 +11,7 @@ $ docker rm $(docker ps -a -q)
 ```bash
 $ docker rmi $(docker images -q)
 ```
+- 캐시된 이미지 삭제
+```bash
+$ docker image prune -a
+```

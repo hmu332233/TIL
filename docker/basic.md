@@ -132,3 +132,16 @@ $ docker push IMAGE[:TAG]
 ```bash
 $ docker push hmu332233/remote:1.0
 ```
+
+### 기타
+#### commit
+컨테이너의 변경사항을 이미지파일로 저장
+```bash
+$ docker commit <옵션> <컨테이너 이름> <이미지 이름>:<태그>
+// 예시
+$ docker commit -a "hmu332233" -m "[Add] git" e54ca5efa2e9 minung--dev-env
+```
+| 옵션 | 설명 |
+|---|---|
+|-m|	로그 메세지|
+|-a|	커밋한 사용자 이름|

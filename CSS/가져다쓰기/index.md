@@ -21,3 +21,23 @@ color: white;
 background-color: #ff7473;
 }
 ```
+
+
+## image wrapper
+```css
+.imageWrapper {
+	position: relative;
+	width: 12.8125rem; // 205px
+	height: 6.625rem; // 106px
+	margin-right: 1.5625rem; // 25px
+	overflow: hidden;
+}
+.imageWrapper img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: -100%;
+	bottom: -100%;
+	margin: auto;
+}
+```

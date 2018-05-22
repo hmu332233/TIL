@@ -41,3 +41,17 @@ background-color: #ff7473;
 	margin: auto;
 }
 ```
+
+## flex warp 마진 상관없이 밑으로 내려가도록 하기
+```css
+.parent {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.child {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+```

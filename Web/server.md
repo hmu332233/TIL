@@ -63,8 +63,6 @@ private IP address 사설 아이피라고 부른다.
 그리고 위키에서 요청을 받아서 다시 공유기로 응답을 할텐데  
 이것을 아까 기록해두었던걸 보고 다시 192.168.0.4로 변경해서 내 컴퓨터로 다시 보내준다.
 
-----
-
 ### 포트포워딩
 포트 0 ~ 65535 까지 있다
 0 ~ 1023 - well-known port
@@ -78,3 +76,15 @@ private IP address 사설 아이피라고 부른다.
 192.168.0.4의 80번 포트로 보낸다.
 
 이런식으로 해서 공유기에 연결된 서버를 외부에서 접속가능하도록 만들 수 있다.
+
+### DHCP (Dynamic Host Configuration Protocol)
+공유기는 보통 DHCP Server 라는게 내장되어있고
+기기들은 보통 DHCP Client 라는게 내장되어있다.
+
+mac address 통신 부품의 고유 식별자
+
+새로운 기기가 공유기에 연결되었을 때
+1. DHCP Client는 DHCP Server에게 본인의 mac address를 알려주면서 IP주소를 요청한다.
+2. DHCP Server는 정보를 받고 Server의 mac address와 IP 주소를 응답으로 보내준다.
+3. DHCP Client는 DHCP Server에게 해당 id를 쓰겠다고 다시 보낸다.
+4. DHCP Server는 DHCP Client에게 승인과 동시에 ip를 사용가능한 시간을 알려준다.

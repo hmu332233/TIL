@@ -11,3 +11,8 @@
 </a>
 ```
 [참고](https://stackoverflow.com/questions/9400883/change-image-on-hover)
+
+- onerror
+```html
+<img src="image" alt="image" onError={(e) => { e.target.src='alternative_image.png' }} />
+```

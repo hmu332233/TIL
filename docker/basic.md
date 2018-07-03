@@ -145,3 +145,8 @@ $ docker commit -a "hmu332233" -m "[Add] git" e54ca5efa2e9 minung--dev-env
 |---|---|
 |-m|	로그 메세지|
 |-a|	커밋한 사용자 이름|
+
+#### 실시간 모니터링
+```bash
+$ docker stats
+```

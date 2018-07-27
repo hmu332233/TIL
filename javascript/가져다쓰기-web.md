@@ -60,3 +60,10 @@ function set_position(target) {
   target.css('left', left + 'px');
 }
 ```
+
+## url 변경하기
+```
+history.pushState(null, null, url); // history가 생기면서 url 변경
+history.replaceState(null, null, url); // history가 생기지 않으면서 url 변경
+```
+[참고](https://stackoverflow.com/questions/20937280/how-to-change-url-without-changing-browser-history)

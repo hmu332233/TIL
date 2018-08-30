@@ -54,16 +54,12 @@ MyComponent.propTypes = {
     fontSize: PropTypes.number
   }),
 
-  // You can chain any of the above with `isRequired` to make sure a warning
-  // is shown if the prop isn't provided.
+  // isRequired가 붙은건 props으로 안받으면 경고를 뿜는다
   requiredFunc: PropTypes.func.isRequired,
-
-  // A value of any data type
   requiredAny: PropTypes.any.isRequired,
 
-  // You can also specify a custom validator. It should return an Error
-  // object if the validation fails. Don't `console.warn` or throw, as this
-  // won't work inside `oneOfType`.
+  // 커스텀 validator도 명세가능하다.
+  // 단, `oneOfType`에서는 동작하지않는다.
   customProp: function(props, propName, componentName) {
     if (!/matchme/.test(props[propName])) {
       return new Error(
@@ -73,11 +69,9 @@ MyComponent.propTypes = {
     }
   },
 
-  // You can also supply a custom validator to `arrayOf` and `objectOf`.
-  // It should return an Error object if the validation fails. The validator
-  // will be called for each key in the array or object. The first two
-  // arguments of the validator are the array or object itself, and the
-  // current item's key.
+  // `arrayOf` 와 `objectOf` 또한 커스텀이 가능하다.
+  // object 또는 array의 각 key들에 의해 validator가 호출된다
+  // validator의 첫번째와 두번째 파라미터는 array 또는 object의 본인과 현재 아이템의 key이다.
   customArrayProp: PropTypes.arrayOf(function(propValue, key, componentName, location, propFullName) {
     if (!/matchme/.test(propValue[key])) {
       return new Error(

@@ -19,6 +19,13 @@ $ curl https://raw.githubusercontent.com/creationix/nvm/v0.18.0/install.sh | bas
 #### 설치된 nodejs 목록 확인
 `nvm ls`
 
+#### 기타
+- zsh 사용시 mac에서 추가할 것 (~/.zshrc)
+```
+export NVM_DIR="~/.nvm"
+source ~/.nvm/nvm.sh
+```
+
 ### n을 이용한 버전 변경
 - apt-get을 사용해 nodejs를 설치한 경우 변경이 바로 되지 않는다.
 - `npm n`을 이용해 버전을 변경하도록 한다.

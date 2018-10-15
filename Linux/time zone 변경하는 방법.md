@@ -17,3 +17,7 @@
   ```bash
   $ sudo dpkg-reconfigure tzdata
   ```
+  아래와 같이 한 줄로도 가능하다
+  ```bash
+  & sudo bash -c 'echo "Asia/Seoul" > /etc/timezone' && dpkg-reconfigure -f noninteractive tzdata
+  ```

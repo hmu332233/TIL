@@ -24,3 +24,7 @@
   # debian
   $ bash -c 'echo "Asia/Seoul" > /etc/timezone' && rm /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
   ```
+  또다른 방법
+  ```bash
+  $ ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime && echo Asia/Seoul > /etc/timezone
+  ```

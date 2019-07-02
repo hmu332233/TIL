@@ -7,6 +7,20 @@
 }
 ```
 
+## 줄바꿈
+
+### 글자 단위로 자르기
+```css
+word-wrap: break-word;
+word-break: break-all;
+```
+
+### 단어 단위로 자르기
+```css
+word-wrap: break-word;
+word-break: keep-all;
+```
+
 ## 텍스트 드래그 스타일링
 ```css
 ::selection
